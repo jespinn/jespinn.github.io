@@ -3,7 +3,7 @@ layout: ../../components/MarkdownPost.astro
 title: "E-Portafolio – Bases de Datos I"
 author: 
   name: "Antonio Espin Molina"
-  url: "/github foto.jpg"
+  url: "/github-foto.jpg"
 
 image:
   url: "/github-foto.jpg"
