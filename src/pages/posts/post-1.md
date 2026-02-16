@@ -10,7 +10,7 @@ image:
   alt: "Foto de perfil Antonio Espin"
 
 tags: ["bases de datos", "portafolio", "sql"]
-pubDate: '2026-02-16'
+pubDate: '2026-02-15'
 likes: '0'
 comments: '0'
 ---
