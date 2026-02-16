@@ -1,28 +1,38 @@
 ---
 layout: ../../components/MarkdownPost.astro
-title: "Warren Buffett’s Seven Rules: An Economic Masterclass in Value Investing"
+title: "E-Portafolio – Bases de Datos I"
 author: 
-  name: "Jessica Stillman"
-  url: "https://images.pexels.com/photos/935743/pexels-photo-935743.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+  name: "Antonio Espin Molina"
+  url: "/github-foto.jpg"
+
 image:
-  url: "https://images.pexels.com/photos/313690/pexels-photo-313690.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-  alt: "xx"
-tags: [""]
-pubDate: 'Feb 09, 2025'
-likes: '12.3k'
-comments: '119'
+  url: "/github-foto.jpg"
+  alt: "Foto de perfil Antonio Espin"
+
+tags: ["bases de datos", "portafolio", "sql"]
+pubDate: '2026-02-16'
+likes: '0'
+comments: '0'
 ---
 
+## Presentación
 
-Look around at social media, politics, or the news and you’re likely to agree with the bodybuilding champ-turned-movie star-turned-governor of California.
+Soy **Antonio Espin Molina**, estudiante de **Ingeniería de Sistemas** en la **Universidad El Bosque**.  
+Este e-portafolio reúne las evidencias y actividades desarrolladas durante la asignatura **Bases de Datos I**.
 
-Whether he was lifting weights for five hours a day or trying to hack a path through the thicket of California politics, Schwarzenegger claims he was consistently happy. What allowed him to maintain a positive outlook despite personal setbacks and tough jobs? In his book Be Useful, Schwarzenegger boils down his philosophy to just four words.
+![Foto de perfil](/github-foto.jpg)
 
+---
 
-You might think a simple mantra is too flimsy a thing to be actually meaningful in the face of real-life struggle. But according to top psychologists, the Governator actually manages to capture profound truths about human flourishing in one quick motto.
+## Contenido del Portafolio
 
+- Modelos **Entidad–Relación**
+- Consultas **SQL** (SELECT, JOIN, WHERE, GROUP BY)
+- Diseño de tablas y normalización
+- Evidencias prácticas y ejercicios del semestre
 
+---
 
+## Objetivo
 
-
-
+Demostrar la comprensión de los conceptos fundamentales de bases de datos, el manejo de consultas SQL y la capacidad de diseñar estructuras de información eficientes aplicadas a casos reales.
