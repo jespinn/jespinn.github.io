@@ -1,24 +1,24 @@
 ---
-const reviews = [
+const objetivos = [
   {
-    text: "El modelado ER me ayudó a entender cómo se relacionan las entidades dentro de una base de datos y evitar errores desde el diseño.",
-    name: "Aprendizaje Modelado",
-    role: "Bases de Datos I"
+    text: "Comprender cómo diseñar diagramas Entidad-Relación para representar correctamente entidades, atributos y relaciones.",
+    name: "Modelado de Bases de Datos",
+    role: "Objetivo de aprendizaje"
   },
   {
-    text: "La normalización permitió reducir redundancia y mejorar la integridad de los datos aplicando 1FN, 2FN y 3FN.",
-    name: "Aprendizaje Normalización",
-    role: "Bases de Datos I"
+    text: "Aprender a aplicar 1FN, 2FN y 3FN para evitar redundancia de datos y mejorar la integridad de la información.",
+    name: "Normalización",
+    role: "Objetivo de aprendizaje"
   },
   {
-    text: "Las consultas SQL como SELECT, JOIN y GROUP BY fueron clave para extraer información útil de las tablas.",
-    name: "Aprendizaje SQL",
-    role: "Bases de Datos I"
+    text: "Dominar consultas SQL como SELECT, JOIN, WHERE y GROUP BY para manipular datos de manera eficiente.",
+    name: "Lenguaje SQL",
+    role: "Objetivo de aprendizaje"
   },
   {
-    text: "Implementar el portafolio en GitHub Pages me permitió documentar y presentar todo el proceso de aprendizaje.",
+    text: "Desarrollar un proyecto final funcional documentado y publicado en GitHub Pages.",
     name: "Proyecto Final",
-    role: "Portafolio Académico"
+    role: "Meta del curso"
   }
 ];
 ---
@@ -27,14 +27,14 @@ const reviews = [
   <div class="max-w-4xl mx-auto">
 
     <h2 class="text-4xl font-medium mb-12">
-      Reflexiones del Portafolio
+      Objetivos de Aprendizaje
     </h2>
 
     <div class="grid md:grid-cols-2 gap-8">
-      {reviews.map((item) => (
+      {objetivos.map((item) => (
         <div class="bg-white border-3 border-black p-6 shadow-[8px_8px_0px_rgba(0,0,0,0.25)] rotate-[-1deg]">
           <p class="text-lg mb-4">
-            “{item.text}”
+            {item.text}
           </p>
 
           <div class="mt-4">
