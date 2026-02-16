@@ -1,73 +1,49 @@
 ---
-import svgNew from '../assets/new.svg'
-
-const testimonials = [
-  { 
-    comment: `“Design is a bridge that connects everyone and everything”`,
-    author: {
-      name: `Client Name`,
-      pos: `Project Manager, Company Name`,
-      pic: `https://images.pexels.com/photos/2709386/pexels-photo-2709386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2`
-    },
-    cls: `rotate-2 -translate-y-10`
-   },
-   { 
-    comment: `“Design is a bridge that connects everyone and everything”`,
-    author: {
-      name: `Client Name`,
-      pos: `Project Manager, Company Name`,
-      pic: `https://images.pexels.com/photos/2128819/pexels-photo-2128819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2`
-    },
-    cls: `-rotate-2 -translate-x-10  z-5`
-   },
-   { 
-    comment: `“Design is a bridge that connects everyone and everything”`,
-    author: {
-      name: `Client Name`,
-      pos: `Project Manager, Company Name`,
-      pic: `https://images.pexels.com/photos/2169429/pexels-photo-2169429.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2`
-    },
-    cls: `rotate-2 translate-x-5 z-5`
-   },
-   { 
-    comment: `“Design is a bridge that connects everyone and everything”`,
-    author: {
-      name: `Client Name`,
-      pos: `Project Manager, Company Name`,
-      pic: `https://images.pexels.com/photos/3586798/pexels-photo-3586798.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2`
-    },
-    cls: `-rotate-2 translate-y-10 md:translate-y-15`
-   },
-]
+const reviews = [
+  {
+    text: "El modelado ER me ayudó a entender cómo se relacionan las entidades dentro de una base de datos y evitar errores desde el diseño.",
+    name: "Aprendizaje Modelado",
+    role: "Bases de Datos I"
+  },
+  {
+    text: "La normalización permitió reducir redundancia y mejorar la integridad de los datos aplicando 1FN, 2FN y 3FN.",
+    name: "Aprendizaje Normalización",
+    role: "Bases de Datos I"
+  },
+  {
+    text: "Las consultas SQL como SELECT, JOIN y GROUP BY fueron clave para extraer información útil de las tablas.",
+    name: "Aprendizaje SQL",
+    role: "Bases de Datos I"
+  },
+  {
+    text: "Implementar el portafolio en GitHub Pages me permitió documentar y presentar todo el proceso de aprendizaje.",
+    name: "Proyecto Final",
+    role: "Portafolio Académico"
+  }
+];
 ---
 
+<section class="px-3 pb-20">
+  <div class="max-w-4xl mx-auto">
 
-<section>
-    <div class="max-w-4xl mx-auto pb-20 px-10 overflow-hidden">
-      <div class="grid grid-cols-1 md:grid-cols-2">
-        <div class="flex relative">
-          <h1 class="text-3xl">Here’s what my clients are saying about my work</h1>
-          <img src={svgNew.src} alt="arrow" width="40" class="absolute -right-3 md:-right-10 bottom-0" />
-        </div>
-      </div>
-  
-  
-      <div class="grid grid-cols-1 md:grid-cols-2 py-30">
-        {testimonials.map(item => ( 
-          <div class={`flex flex-col gap-3 p-5 pr-15 bg-white border-2 shadow-[6px_6px_0px_rgba(0,0,0,0.3)] ${item.cls}`}>
-            <p>{item.comment}</p>
-            <div class="flex items-center gap-2">
-              <div><div class="size-11 rounded-full border overflow-hidden">
-                  <img src={item.author.pic} alt="" class="w-full h-full object-cover" />
-              </div></div>
-              <div>
-                <h3 class="font-medium">{item.author.name}</h3>
-                <p>{item.author.pos}</p>
-              </div>
-            </div>
+    <h2 class="text-4xl font-medium mb-12">
+      Reflexiones del Portafolio
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      {reviews.map((item) => (
+        <div class="bg-white border-3 border-black p-6 shadow-[8px_8px_0px_rgba(0,0,0,0.25)] rotate-[-1deg]">
+          <p class="text-lg mb-4">
+            “{item.text}”
+          </p>
+
+          <div class="mt-4">
+            <strong>{item.name}</strong><br />
+            <span class="opacity-70 text-sm">{item.role}</span>
           </div>
-        ))}
-      </div>
-  
+        </div>
+      ))}
     </div>
-   </section>
+
+  </div>
+</section>
