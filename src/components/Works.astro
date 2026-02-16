@@ -1,52 +1,63 @@
 ---
-import Bars from "./Bars.astro"
-import { buy } from "../sample"
-
-import svgUnderline from '../assets/underline.svg'
-import arrowCard from '../assets/arrow-card.svg'
-
-const portfolio = [
-  { 
-    name: 'Portfolio design', desc: `UI design - User research - webflow development`,
-    cover: `https://images.pexels.com/photos/1051075/pexels-photo-1051075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2`
+const cards = [
+  {
+    title: "Modelado",
+    desc: "Diagramas ER, entidades, atributos y relaciones de bases de datos.",
+    img: "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    link: "/evidencias/#modelado",
   },
-  { 
-    name: 'Portfolio design', desc: `UI design - User research - webflow development`,
-    cover: `https://images.pexels.com/photos/2303781/pexels-photo-2303781.jpeg?auto=compress&cs=tinysrgb&w=1600`
+  {
+    title: "Normalización",
+    desc: "Aplicación de 1FN, 2FN y 3FN para reducir redundancia y mejorar integridad.",
+    img: "https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    link: "/evidencias/#normalizacion",
   },
-  { 
-    name: 'Portfolio design', desc: `UI design - User research - webflow development`,
-    cover: `https://images.pexels.com/photos/441963/pexels-photo-441963.jpeg?auto=compress&cs=tinysrgb&w=1600`
+  {
+    title: "SQL",
+    desc: "Consultas SELECT, JOIN, WHERE, GROUP BY y subconsultas.",
+    img: "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    link: "/evidencias/#sql",
   },
-  { 
-    name: 'Portfolio design', desc: `UI design - User research - webflow development`,
-    cover: `https://images.pexels.com/photos/245240/pexels-photo-245240.jpeg?auto=compress&cs=tinysrgb&w=1600`
+  {
+    title: "Proyecto",
+    desc: "Implementación final del portafolio usando GitHub Pages y Astro.",
+    img: "https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    link: "/evidencias/#proyecto",
   },
-]
+];
 ---
 
+<section class="px-3 pb-20">
+  <div class="max-w-4xl mx-auto">
 
-<section class="py-25 space-y-10 px-5" id="work">
-    <div class="max-w-md mx-auto relative ">
-      <h1 class="text-4xl font-medium text-center">My Portfolio</h1>
-      <img src={svgUnderline.src} alt="arrow" width="140" class="absolute left-50 -bottom-1" />
-    </div>
-  
-    <div class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10"> 
-      {portfolio.map(item => ( 
-        <a href={buy.link} target="_blank" class="flex flex-col bg-white p-5 group relative transition-all duration-200 hover:shadow-[4px_4px_0px_rgba(0,0,0,0.3)]">
-          <div class="w-full h-[200px] overflow-hidden border-2">
-           <img src={item.cover} alt="" class="w-full h-full object-cover" />
+    <h2 class="text-4xl font-medium text-center">
+      Evidencias del Portafolio
+    </h2>
+    <p class="text-center opacity-70 mt-3 mb-10 text-lg">
+      Modelado | Normalización | SQL | Proyecto
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {cards.map((item) => (
+        <a href={item.link} class="block border-3 border-black bg-white shadow-[8px_8px_0px_rgba(0,0,0,0.25)] hover:-translate-y-1 transition">
+          <div class="p-4">
+            <img src={item.img} alt={item.title} class="w-full border-2 border-black" />
           </div>
-          <div class="space-y-1 pt-4">
-            <div class="flex pr-2">
-              <h2 class="text-xl font-medium flex-1">{item.name}</h2>
-              <img src={arrowCard.src} alt="arrow" width="25" />
+
+          <div class="px-6 pb-6">
+            <div class="flex items-start gap-3">
+              <h3 class="text-2xl font-bold flex-1">{item.title}</h3>
+              <div class="border-2 border-black size-8 flex items-center justify-center">
+                ↗
+              </div>
             </div>
-            <p class="mr-20">{item.desc}</p>
+            <p class="mt-2 opacity-80">
+              {item.desc}
+            </p>
           </div>
-          <Bars />
         </a>
       ))}
     </div>
+
+  </div>
 </section>
