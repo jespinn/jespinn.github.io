@@ -1,15 +1,13 @@
 const author = {
-  name: `Angela`,
-  nickname: `angie`,
-  tiktok: `https://www.tiktok.com/@indieteamofone`,
-  ig: `https://www.instagram.com/indieteamofone/`,
-  x: `https://x.com/indieteamofone`,
-  email: "mailto:anthonylannn@gmail.com",
+  name: `Jose Antonio Espin`,
+  nickname: `Espin`,
+  ig: `https://www.instagram.com/j_espinnn/`,
+  email: "jespin@unbosque.edu.co",
 };
 
 const buy = {
-  title: `See on Github`,
-  link: `https://github.com/anthonylan/angie`,
+  title: `Encuentrame en  Github`,
+  link: `https://github.com/jespinn`,
 };
 
 export { author, buy };
