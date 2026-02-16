@@ -6,6 +6,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
  site : 'https://jespinn.github.io',
  vite: {
+   // @ts-ignore
    plugins: [tailwindcss()],
  }
 });
