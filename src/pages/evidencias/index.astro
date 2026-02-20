@@ -2,7 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 ---
 
-<Layout title="Evidencias">
+<Layout title="Evidencias | Portafolio de Bases de Datos">
 
 <section class="px-3 py-20">
   <div class="max-w-5xl mx-auto">
@@ -12,38 +12,40 @@ import Layout from "../../layouts/Layout.astro";
     </h1>
 
     <p class="text-center opacity-70 mb-12 text-lg">
-      Modelado | Normalización | SQL | Proyecto
+      Modelado | Normalización | SQL | Proyecto Final
     </p>
 
     <div class="grid md:grid-cols-2 gap-8">
 
       <div class="bg-white border-3 p-8 shadow-[8px_8px_0px_rgba(0,0,0,0.3)] hover:-translate-y-1 transition">
-        <h2 class="text-2xl font-semibold mb-3">Modelado</h2>
-        <img src="/image_b4ec89.png" alt="Diagrama Entidad Relación" class="w-full h-auto mb-4 border-2 border-black rounded" />
+        <h2 class="text-2xl font-semibold mb-3 text-red-600">Modelado (ERD)</h2>
+        <img src="/Ejercicio Aeropuerto BD1.png" alt="Diagrama Entidad Relación Aerolínea" class="w-full h-auto mb-4 border-2 border-black rounded" />
         <p class="opacity-80">
-          Diagramas ER, entidades, atributos y relaciones de bases de datos.
+          Diseño de diagramas Entidad-Relación, definición de entidades, atributos (simples, compuestos, multivalorados) y cardinalidades.
         </p>
       </div>
 
       <div class="bg-white border-3 p-8 shadow-[8px_8px_0px_rgba(0,0,0,0.3)] hover:-translate-y-1 transition">
         <h2 class="text-2xl font-semibold mb-3">Normalización</h2>
+        <img src="/Ejercicio Hospital BD1.png" alt="Caso de Normalización Hospital" class="w-full h-auto mb-4 border-2 border-black rounded" />
         <p class="opacity-80">
-          Aplicación de 1FN, 2FN y 3FN para reducir redundancia y mejorar integridad.
+          Optimización de estructuras de datos mediante la aplicación de las Formas Normales (1FN, 2FN y 3FN).
         </p>
       </div>
 
       <div class="bg-white border-3 p-8 shadow-[8px_8px_0px_rgba(0,0,0,0.3)] hover:-translate-y-1 transition">
-        <h2 class="text-2xl font-semibold mb-3">SQL</h2>
+        <h2 class="text-2xl font-semibold mb-3">Consultas SQL</h2>
+        <img src="/Ejercicio Streaming BD1.png" alt="Captura de consultas SQL" class="w-full h-auto mb-4 border-2 border-black rounded" />
         <p class="opacity-80">
-          Consultas SELECT, JOIN, WHERE, GROUP BY y subconsultas.
+          Implementación de scripts DDL y DML: SELECT, JOIN complejos, agregaciones y gestión de subconsultas.
         </p>
       </div>
 
       <div class="bg-white border-3 p-8 shadow-[8px_8px_0px_rgba(0,0,0,0.3)] hover:-translate-y-1 transition">
-        <h2 class="text-2xl font-semibold mb-3">Proyecto</h2>
-        <img src="/image_b4ec8b.png" alt="Estructura del Proyecto en GitHub" class="w-full h-auto mb-4 border-2 border-black rounded" />
+        <h2 class="text-2xl font-semibold mb-3 text-blue-600">Proyecto Final</h2>
+        <img src="/image_7e5c05.png" alt="Componentes del Modelo ER" class="w-full h-auto mb-4 border-2 border-black rounded" />
         <p class="opacity-80">
-          Implementación final del portafolio usando GitHub Pages y Astro.
+          Documentación técnica del portafolio desplegado con Astro y GitHub Pages.
         </p>
       </div>
 
