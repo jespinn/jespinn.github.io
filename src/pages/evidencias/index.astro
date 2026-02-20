@@ -11,61 +11,79 @@ import Layout from "../../layouts/Layout.astro";
       Modelo Entidad Relación
     </h1>
 
-    <div class="flex flex-col gap-20">
+    <div class="flex flex-col gap-20 mb-20">
 
-      <article class="flex flex-col items-center">
-        <h2 class="text-3xl font-bold mb-6 text-gray-800 self-start border-l-8 border-red-500 pl-4">
-          Ejercicio Aeropuerto BD1
-        </h2>
-        <div class="w-full bg-white border-4 border-black shadow-[12px_12px_0px_rgba(0,0,0,1)] rounded-sm overflow-hidden">
+      <article class="flex flex-col">
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">Ejercicio Aeropuerto BD1</h2>
+        <div class="w-full bg-white border-4 border-black shadow-[10px_10px_0px_rgba(0,0,0,1)] rounded-sm">
           <img 
             src="/Ejercicio Aeropuerto BD1.png" 
-            alt="Diagrama de Aeropuerto" 
-            class="w-full h-auto display-block"
+            alt="Diagrama Aeropuerto" 
+            class="w-full h-auto"
           />
         </div>
       </article>
 
-      <article class="flex flex-col items-center">
-        <h2 class="text-3xl font-bold mb-6 text-gray-800 self-start border-l-8 border-blue-500 pl-4">
-          Ejercicio Hospital BD1
-        </h2>
-        <div class="w-full bg-white border-4 border-black shadow-[12px_12px_0px_rgba(0,0,0,1)] rounded-sm overflow-hidden">
+      <article class="flex flex-col">
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">Ejercicio Hospital BD1</h2>
+        <div class="w-full bg-white border-4 border-black shadow-[10px_10px_0px_rgba(0,0,0,1)] rounded-sm">
           <img 
             src="/Ejercicio Hospital BD1.png" 
-            alt="Diagrama de Hospital" 
-            class="w-full h-auto display-block"
+            alt="Diagrama Hospital" 
+            class="w-full h-auto"
           />
         </div>
       </article>
 
-      <article class="flex flex-col items-center">
-        <h2 class="text-3xl font-bold mb-6 text-gray-800 self-start border-l-8 border-purple-500 pl-4">
-          Ejercicio Streaming BD1
-        </h2>
-        <div class="w-full bg-white border-4 border-black shadow-[12px_12px_0px_rgba(0,0,0,1)] rounded-sm overflow-hidden">
+      <article class="flex flex-col">
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">Ejercicio Streaming BD1</h2>
+        <div class="w-full bg-white border-4 border-black shadow-[10px_10px_0px_rgba(0,0,0,1)] rounded-sm">
           <img 
             src="/Ejercicio Streaming BD1.png" 
-            alt="Diagrama de Streaming" 
-            class="w-full h-auto display-block"
+            alt="Diagrama Streaming" 
+            class="w-full h-auto"
           />
         </div>
       </article>
 
     </div>
+
+    <hr class="border-2 border-black mb-20" />
+
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <div class="bg-white border-3 border-black p-8 shadow-[8px_8px_0px_rgba(0,0,0,0.3)] hover:-translate-y-1 transition">
+        <h2 class="text-2xl font-semibold mb-3">Normalización</h2>
+        <p class="opacity-80">
+          Aplicación de 1FN, 2FN y 3FN para reducir redundancia y mejorar integridad de los datos en diversos casos de estudio.
+        </p>
+      </div>
+
+      <div class="bg-white border-3 border-black p-8 shadow-[8px_8px_0px_rgba(0,0,0,0.3)] hover:-translate-y-1 transition">
+        <h2 class="text-2xl font-semibold mb-3">SQL</h2>
+        <p class="opacity-80">
+          Desarrollo de consultas estructuradas utilizando SELECT, JOIN, WHERE, GROUP BY y subconsultas para la extracción de información.
+        </p>
+      </div>
+
+      <div class="bg-white border-3 border-black p-8 shadow-[8px_8px_0px_rgba(0,0,0,0.3)] hover:-translate-y-1 transition md:col-span-2">
+        <h2 class="text-2xl font-semibold mb-3">Proyecto Portafolio</h2>
+        <img src="/image_7e5c05.png" alt="Componentes del Modelo" class="w-full max-w-2xl h-auto mb-4 border-2 border-black rounded mx-auto" />
+        <p class="opacity-80 text-center">
+          Implementación final del portafolio de evidencias utilizando <strong>Astro</strong> y despliegue mediante <strong>GitHub Pages</strong>.
+        </p>
+      </div>
+
+    </div>
+
   </div>
 </section>
 
 </Layout>
 
 <style>
-  /* Optimizamos para que las imágenes no se vean borrosas y mantengan su calidad original */
-  img {
-    image-rendering: auto;
-    transition: transform 0.3s ease;
-  }
-  
-  article:hover img {
-    transform: scale(1.01);
+
+  h1, h2 {
+    font-family: 'Inter', sans-serif;
   }
 </style>
