@@ -2,116 +2,55 @@
 import Layout from "../../layouts/Layout.astro";
 ---
 
-<Layout title="Evidencias | Portafolio de Bases de Datos">
+<Layout title="Evidencias | Modelo Entidad Relación">
 
-<section class="px-3 py-20">
+<section class="px-3 py-20 bg-gray-50">
   <div class="max-w-5xl mx-auto">
 
-    <h1 class="text-4xl md:text-5xl font-bold text-center mb-4">
-      Evidencias del Portafolio
+    <h1 class="text-4xl md:text-6xl font-black text-center mb-16 uppercase tracking-tighter">
+      Modelo Entidad Relación
     </h1>
 
-    <p class="text-center opacity-70 mb-12 text-lg">
-      Modelado | Normalización | SQL | Proyecto Final
-    </p>
+    <div class="flex flex-col gap-20">
 
-    <div class="grid md:grid-cols-2 gap-8">
-
-<<<<<<< HEAD
-      <div class="bg-white border-3 p-8 shadow-[8px_8px_0px_rgba(0,0,0,0.3)] hover:-translate-y-1 transition border-black">
-        <h2 class="text-2xl font-semibold mb-3">Modelado: Aeropuerto</h2>
-        <div class="w-full h-64 overflow-hidden border-2 border-black rounded mb-4">
+      <article class="flex flex-col items-center">
+        <h2 class="text-3xl font-bold mb-6 text-gray-800 self-start border-l-8 border-red-500 pl-4">
+          Ejercicio Aeropuerto BD1
+        </h2>
+        <div class="w-full bg-white border-4 border-black shadow-[12px_12px_0px_rgba(0,0,0,1)] rounded-sm overflow-hidden">
           <img 
             src="/Ejercicio Aeropuerto BD1.png" 
-            alt="Modelo ER Aeropuerto" 
-            class="w-full h-full object-cover"
+            alt="Diagrama de Aeropuerto" 
+            class="w-full h-auto display-block"
           />
         </div>
-=======
-      <div class="bg-white border-3 p-8 shadow-[8px_8px_0px_rgba(0,0,0,0.3)] hover:-translate-y-1 transition">
-        <h2 class="text-2xl font-semibold mb-3 text-red-600">Modelado (ERD)</h2>
-        <img src="/Ejercicio Aeropuerto BD1.png" alt="Diagrama Entidad Relación Aerolínea" class="w-full h-auto mb-4 border-2 border-black rounded" />
->>>>>>> 7812325be2ced79079d0ebe6fe0bea53351aad40
-        <p class="opacity-80">
-<<<<<<< HEAD
-          Diseño del esquema Entidad-Relación para la gestión de vuelos, pilotos y bases.
-=======
-          Diseño de diagramas Entidad-Relación, definición de entidades, atributos (simples, compuestos, multivalorados) y cardinalidades.
->>>>>>> 7812325be2ced79079d0ebe6fe0bea53351aad40
-        </p>
-      </div>
+      </article>
 
-<<<<<<< HEAD
-      <div class="bg-white border-3 p-8 shadow-[8px_8px_0px_rgba(0,0,0,0.3)] hover:-translate-y-1 transition border-black">
-        <h2 class="text-2xl font-semibold mb-3">Normalización: Hospital</h2>
-        <div class="w-full h-64 overflow-hidden border-2 border-black rounded mb-4">
+      <article class="flex flex-col items-center">
+        <h2 class="text-3xl font-bold mb-6 text-gray-800 self-start border-l-8 border-blue-500 pl-4">
+          Ejercicio Hospital BD1
+        </h2>
+        <div class="w-full bg-white border-4 border-black shadow-[12px_12px_0px_rgba(0,0,0,1)] rounded-sm overflow-hidden">
           <img 
             src="/Ejercicio Hospital BD1.png" 
-            alt="Normalización Hospital" 
-            class="w-full h-full object-cover"
+            alt="Diagrama de Hospital" 
+            class="w-full h-auto display-block"
           />
         </div>
-=======
-      <div class="bg-white border-3 p-8 shadow-[8px_8px_0px_rgba(0,0,0,0.3)] hover:-translate-y-1 transition">
-        <h2 class="text-2xl font-semibold mb-3">Normalización</h2>
-        <img src="/Ejercicio Hospital BD1.png" alt="Caso de Normalización Hospital" class="w-full h-auto mb-4 border-2 border-black rounded" />
->>>>>>> 7812325be2ced79079d0ebe6fe0bea53351aad40
-        <p class="opacity-80">
-<<<<<<< HEAD
-          Aplicación de las formas normales para optimizar la base de datos de un centro médico.
-=======
-          Optimización de estructuras de datos mediante la aplicación de las Formas Normales (1FN, 2FN y 3FN).
->>>>>>> 7812325be2ced79079d0ebe6fe0bea53351aad40
-        </p>
-      </div>
+      </article>
 
-<<<<<<< HEAD
-      <div class="bg-white border-3 p-8 shadow-[8px_8px_0px_rgba(0,0,0,0.3)] hover:-translate-y-1 transition border-black">
-        <h2 class="text-2xl font-semibold mb-3">SQL: Streaming</h2>
-        <div class="w-full h-64 overflow-hidden border-2 border-black rounded mb-4">
+      <article class="flex flex-col items-center">
+        <h2 class="text-3xl font-bold mb-6 text-gray-800 self-start border-l-8 border-purple-500 pl-4">
+          Ejercicio Streaming BD1
+        </h2>
+        <div class="w-full bg-white border-4 border-black shadow-[12px_12px_0px_rgba(0,0,0,1)] rounded-sm overflow-hidden">
           <img 
             src="/Ejercicio Streaming BD1.png" 
-            alt="Consultas SQL Streaming" 
-            class="w-full h-full object-cover"
+            alt="Diagrama de Streaming" 
+            class="w-full h-auto display-block"
           />
         </div>
-=======
-      <div class="bg-white border-3 p-8 shadow-[8px_8px_0px_rgba(0,0,0,0.3)] hover:-translate-y-1 transition">
-        <h2 class="text-2xl font-semibold mb-3">Consultas SQL</h2>
-        <img src="/Ejercicio Streaming BD1.png" alt="Captura de consultas SQL" class="w-full h-auto mb-4 border-2 border-black rounded" />
->>>>>>> 7812325be2ced79079d0ebe6fe0bea53351aad40
-        <p class="opacity-80">
-<<<<<<< HEAD
-          Implementación de consultas y estructuras para una plataforma de servicios streaming.
-=======
-          Implementación de scripts DDL y DML: SELECT, JOIN complejos, agregaciones y gestión de subconsultas.
->>>>>>> 7812325be2ced79079d0ebe6fe0bea53351aad40
-        </p>
-      </div>
-
-<<<<<<< HEAD
-      <div class="bg-white border-3 p-8 shadow-[8px_8px_0px_rgba(0,0,0,0.3)] hover:-translate-y-1 transition border-black">
-        <h2 class="text-2xl font-semibold mb-3">Componentes ER</h2>
-        <div class="w-full h-64 overflow-hidden border-2 border-black rounded mb-4">
-          <img 
-            src="/image_7e5c05.png" 
-            alt="Tipos de atributos" 
-            class="w-full h-full object-contain bg-gray-50"
-          />
-        </div>
-=======
-      <div class="bg-white border-3 p-8 shadow-[8px_8px_0px_rgba(0,0,0,0.3)] hover:-translate-y-1 transition">
-        <h2 class="text-2xl font-semibold mb-3 text-blue-600">Proyecto Final</h2>
-        <img src="/image_7e5c05.png" alt="Componentes del Modelo ER" class="w-full h-auto mb-4 border-2 border-black rounded" />
->>>>>>> 7812325be2ced79079d0ebe6fe0bea53351aad40
-        <p class="opacity-80">
-<<<<<<< HEAD
-          Identificación de atributos simples, compuestos, clave y multivalorados.
-=======
-          Documentación técnica del portafolio desplegado con Astro y GitHub Pages.
->>>>>>> 7812325be2ced79079d0ebe6fe0bea53351aad40
-        </p>
-      </div>
+      </article>
 
     </div>
   </div>
@@ -120,9 +59,13 @@ import Layout from "../../layouts/Layout.astro";
 </Layout>
 
 <style>
-  /* Estilo adicional por si quieres usar fondos personalizados como en tu ejemplo */
-  .card-img {
-    background-position: center;
-    background-size: cover;
+  /* Optimizamos para que las imágenes no se vean borrosas y mantengan su calidad original */
+  img {
+    image-rendering: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  article:hover img {
+    transform: scale(1.01);
   }
 </style>
