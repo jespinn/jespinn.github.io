@@ -1,0 +1,74 @@
+```astro
+---
+import "../styles/global.css";
+import Layout from "../layouts/Layout.astro";
+import AppHeader from "../components/Header.astro";
+import AppFooter from "../components/Footer.astro";
+import CallToAction from "../components/CallToAction.astro";
+import svgUnderline from "../assets/underline.svg";
+import arrowCard from "../assets/arrow-card.svg";
+
+const categorias = [
+    {
+        nombre: "Modelado E-R",
+        url: "/modelo-er/",
+        image: "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        descripcion: "Talleres de modelado entidad-relación: representación de entidades, atributos y relaciones para diseñar bases de datos.",
+    },
+    {
+        nombre: "Fundamentos / Normalización",
+        url: "/fundamentos/",
+        image: "https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        descripcion: "Talleres de normalización (1FN, 2FN, 3FN) y reducción a tablas para mejorar integridad y reducir redundancia.",
+    },
+    {
+        nombre: "Consultas SQL",
+        url: "/consultas-sql/",
+        image: "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        descripcion: "Consultas estructuradas SELECT, JOIN, WHERE, GROUP BY y subconsultas sobre bases de datos relacionales.",
+    },
+    {
+        nombre: "Proyecto Final",
+        url: "/proyecto-final/",
+        image: "https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        descripcion: "Proyecto integrador del curso, documentado y publicado mediante GitHub Pages con Astro.",
+    },
+];
+---
+
+<Layout title="Evidencias | Portafolio José Espin">
+    <AppHeader />
+    <section class="py-25 space-y-10 px-5" id="evidencias">
+        <div class="max-w-md mx-auto relative">
+            <h1 class="text-4xl font-medium text-center">Evidencias del curso</h1>
+            <img src={svgUnderline.src} alt="línea" width="180" class="absolute left-30 -bottom-1" />
+        </div>
+
+        <p class="max-w-2xl mx-auto text-center opacity-80 text-lg">
+            Selecciona una categoría para ver las actividades desarrolladas durante el semestre.
+        </p>
+
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+            {categorias.map((item) => (
+                <a
+                    href={item.url}
+                    class="flex flex-col bg-white p-5 group relative transition-all duration-200 hover:shadow-[6px_6px_0px_var(--accent)] border-2 border-black"
+                >
+                    <div class="w-full h-[200px] overflow-hidden border-2">
+                        <img src={item.image} alt={item.nombre} class="w-full h-full object-cover" />
+                    </div>
+                    <div class="space-y-1 pt-4">
+                        <div class="flex pr-2">
+                            <h2 class="text-xl font-medium flex-1 line-clamp-2">{item.nombre}</h2>
+                            <img src={arrowCard.src} alt="flecha" width="25" />
+                        </div>
+                        <p class="line-clamp-3 text-sm opacity-80">{item.descripcion}</p>
+                    </div>
+                </a>
+            ))}
+        </div>
+    </section>
+    <CallToAction />
+    <AppFooter />
+</Layout>
+```

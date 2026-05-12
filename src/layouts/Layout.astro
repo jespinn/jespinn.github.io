@@ -1,34 +1,41 @@
+```astro
+---
+const { title = "Portafolio | José Antonio Espin" } = Astro.props;
+---
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Jose Espin Portfolio</title>
+		<title>{title}</title>
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
 
-<style>
+<style is:global>
+	:root {
+		--main-bg: #F8F9F5;
+		--accent: #C9B6F4;
+		--rose: #FFC8DD;
+		--ink: #1B1B1F;
+		/* Aliases legacy para no romper componentes que aún usen --yellow / --blue */
+		--yellow: #C9B6F4;
+		--blue: #FFC8DD;
+	}
 
-:root{
-	--main-bg: #FEFFF0;
-	--blue: #BAE6FF;
-	--yellow: #FFDC58;
-}
-
-html,
-body {
-	margin: 0;
-	width: 100%;
-	height: 100%;
-	background-color: var(--main-bg);
-	font-family: "Space Grotesk", sans-serif;
-	scroll-behavior: smooth;
-}
-
-
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		min-height: 100%;
+		background-color: var(--main-bg);
+		font-family: "Inter", "Space Grotesk", system-ui, sans-serif;
+		scroll-behavior: smooth;
+		color: var(--ink);
+	}
 </style>
+```

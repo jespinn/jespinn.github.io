@@ -1,44 +1,80 @@
+```astro
 ---
-import '../styles/global.css'
-import { Image } from 'astro:assets';
-import Layout from '../layouts/Layout.astro';
+import "../styles/global.css";
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
 
-import AppHeader from './Header.astro';
-import AppFooter from './Footer.astro';
-import CallToAction from './CallToAction.astro';
+import AppHeader from "./Header.astro";
+import AppFooter from "./Footer.astro";
+import CallToAction from "./CallToAction.astro";
 
 const styleSheet = {
-    actions: 'text-gray-500 flex items-center gap-2 hover:text-gray-700',
-}
+    actions: "text-gray-500 flex items-center gap-2 hover:text-gray-700 transition-colors",
+};
 
 const { frontmatter } = Astro.props;
+const categoria = (frontmatter?.categoria || "evidencias") as keyof typeof rutasVolver;
+
+const rutasVolver = {
+    "modelo-er": { url: "/modelo-er/", texto: "Volver a Modelado E-R" },
+    "fundamentos": { url: "/fundamentos/", texto: "Volver a Fundamentos" },
+    "consultas-sql": { url: "/consultas-sql/", texto: "Volver a Consultas SQL" },
+    "proyecto-final": { url: "/proyecto-final/", texto: "Volver a Proyecto Final" },
+    "evidencias": { url: "/evidencias/", texto: "Volver a Evidencias" },
+};
+
+const volver = rutasVolver[categoria] || rutasVolver.evidencias;
 ---
 
-<Layout>
+<Layout title={frontmatter.title}>
+    <AppHeader />
 
-<AppHeader />
+    <section class="py-20 px-4 md:px-6">
+        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-[8px_8px_0px_var(--accent)] overflow-hidden border-3 border-black">
+            <div class="p-6 md:p-10 lg:p-12">
+                <a
+                    href={volver.url}
+                    class="inline-flex items-center gap-1 text-[var(--accent)] mb-6 transition-colors group hover:text-black"
+                >
+                    <span class="text-lg">←</span>
+                    <span class="font-medium">{volver.texto}</span>
+                </a>
 
-<section class="mb-30 p-3">
-    <div class="max-w-3xl mx-auto p-3 bg-white flex flex-col gap-7 border-3 mt-10">
-        <Image src={frontmatter.image.url} alt="Head" width={100} height={100} class="w-full border-2" />
-        <h1 class="title text-4xl font-black">{frontmatter.title}</h1>
-
-        <div class="flex flex-col">
-            <div class="flex border-t border-b border-gray-100 mb-5 py-4">
-                <div class="flex-1 flex gap-6">
-                    <a href="#" class={styleSheet.actions}><i class="ri-thumb-up-line text-xl"></i> {frontmatter.likes}</a>
-                    <a href="#" class={styleSheet.actions}><i class="ri-chat-1-line text-xl"></i> {frontmatter.comments}</a>
+                <div class="rounded-lg overflow-hidden border-2 border-black mb-8">
+                    <Image
+                        src={frontmatter.image.url}
+                        alt={frontmatter.image.alt || frontmatter.title}
+                        width={1200}
+                        height={600}
+                        class="w-full h-auto object-cover"
+                    />
                 </div>
-                <div class="flex gap-6">
-                    <a href="#" class={styleSheet.actions}><i class="ri-bookmark-line text-xl"></i> </a>
-                    <a href="#" class={styleSheet.actions}><i class="ri-share-forward-box-line text-xl"></i> </a>
+
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                    {frontmatter.title}
+                </h1>
+
+                <div class="flex flex-col md:flex-row md:items-center justify-between border-t border-b border-gray-200 py-4 mb-8 gap-4">
+                    <div class="flex gap-6">
+                        <span class={styleSheet.actions}>
+                            <i class="ri-calendar-line text-xl"></i>
+                            <span>{frontmatter.pubDate}</span>
+                        </span>
+                        <span class={styleSheet.actions}>
+                            <i class="ri-user-line text-xl"></i>
+                            <span>{frontmatter.author?.name}</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="prose prose-lg max-w-none">
+                    <slot />
                 </div>
             </div>
-        <slot />
-    </div>
-</section>
+        </div>
+    </section>
 
-<CallToAction />
-<AppFooter />
-
+    <CallToAction />
+    <AppFooter />
 </Layout>
+```
