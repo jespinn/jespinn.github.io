@@ -1,7 +1,7 @@
-```astro
 ---
 const { title = "Portafolio | José Antonio Espin" } = Astro.props;
 ---
+
 <!doctype html>
 <html lang="es">
 	<head>
@@ -10,6 +10,10 @@ const { title = "Portafolio | José Antonio Espin" } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+		<link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
 	</head>
 	<body>
 		<slot />
@@ -22,7 +26,6 @@ const { title = "Portafolio | José Antonio Espin" } = Astro.props;
 		--accent: #C9B6F4;
 		--rose: #FFC8DD;
 		--ink: #1B1B1F;
-		/* Aliases legacy para no romper componentes que aún usen --yellow / --blue */
 		--yellow: #C9B6F4;
 		--blue: #FFC8DD;
 	}
@@ -37,5 +40,8 @@ const { title = "Portafolio | José Antonio Espin" } = Astro.props;
 		scroll-behavior: smooth;
 		color: var(--ink);
 	}
+
+	* {
+		box-sizing: border-box;
+	}
 </style>
-```
