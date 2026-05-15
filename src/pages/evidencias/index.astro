@@ -2,86 +2,88 @@
 import Layout from "../../layouts/Layout.astro";
 ---
 
-<Layout title="Evidencias | Portafolio de Bases de Datos">
+<Layout title="Evidencias | Modelo Entidad Relación">
 
-<section class="px-3 py-20">
+<section class="px-3 py-20 bg-gray-50">
   <div class="max-w-5xl mx-auto">
 
-    <h1 class="text-4xl md:text-5xl font-bold text-center mb-4">
-      Evidencias del Portafolio
+    <h1 class="text-4xl md:text-6xl font-black text-center mb-16 uppercase tracking-tighter">
+      Modelo Entidad Relación
     </h1>
 
-    <p class="text-center opacity-70 mb-12 text-lg">
-      Modelado | Normalización | SQL | Proyecto Final
-    </p>
+    <div class="flex flex-col gap-20 mb-20">
+
+      <article class="flex flex-col">
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">Ejercicio Aeropuerto BD1</h2>
+        <div class="w-full bg-white border-4 border-black shadow-[10px_10px_0px_rgba(0,0,0,1)] rounded-sm">
+          <img 
+            src="/Ejercicio Aeropuerto BD1.png" 
+            alt="Diagrama Aeropuerto" 
+            class="w-full h-auto"
+          />
+        </div>
+      </article>
+
+      <article class="flex flex-col">
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">Ejercicio Hospital BD1</h2>
+        <div class="w-full bg-white border-4 border-black shadow-[10px_10px_0px_rgba(0,0,0,1)] rounded-sm">
+          <img 
+            src="/Ejercicio Hospital BD1.png" 
+            alt="Diagrama Hospital" 
+            class="w-full h-auto"
+          />
+        </div>
+      </article>
+
+      <article class="flex flex-col">
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">Ejercicio Streaming BD1</h2>
+        <div class="w-full bg-white border-4 border-black shadow-[10px_10px_0px_rgba(0,0,0,1)] rounded-sm">
+          <img 
+            src="/Ejercicio Streaming BD1.png" 
+            alt="Diagrama Streaming" 
+            class="w-full h-auto"
+          />
+        </div>
+      </article>
+
+    </div>
+
+    <hr class="border-2 border-black mb-20" />
 
     <div class="grid md:grid-cols-2 gap-8">
 
-      <div class="bg-white border-3 p-8 shadow-[8px_8px_0px_rgba(0,0,0,0.3)] hover:-translate-y-1 transition border-black">
-        <h2 class="text-2xl font-semibold mb-3">Modelado (ERD)</h2>
-        <div class="w-full h-64 overflow-hidden border-2 border-black rounded mb-4">
-          <img 
-            src="/Ejercicio Aeropuerto BD1.png" 
-            alt="Modelo ER Aeropuerto" 
-            class="w-full h-full object-cover"
-          />
-        </div>
-        <p class="opacity-80">
-          Diseño de diagramas Entidad-Relación, definición de entidades, atributos (simples, compuestos, multivalorados) y cardinalidades.
-        </p>
-      </div>
-
-      <div class="bg-white border-3 p-8 shadow-[8px_8px_0px_rgba(0,0,0,0.3)] hover:-translate-y-1 transition border-black">
+      <div class="bg-white border-3 border-black p-8 shadow-[8px_8px_0px_rgba(0,0,0,0.3)] hover:-translate-y-1 transition">
         <h2 class="text-2xl font-semibold mb-3">Normalización</h2>
-        <div class="w-full h-64 overflow-hidden border-2 border-black rounded mb-4">
-          <img 
-            src="/Ejercicio Hospital BD1.png" 
-            alt="Normalización Hospital" 
-            class="w-full h-full object-cover"
-          />
-        </div>
         <p class="opacity-80">
-          Optimización de estructuras de datos mediante la aplicación de las Formas Normales (1FN, 2FN y 3FN).
+          Aplicación de 1FN, 2FN y 3FN para reducir redundancia y mejorar integridad de los datos en diversos casos de estudio.
         </p>
       </div>
 
-      <div class="bg-white border-3 p-8 shadow-[8px_8px_0px_rgba(0,0,0,0.3)] hover:-translate-y-1 transition border-black">
-        <h2 class="text-2xl font-semibold mb-3">Consultas SQL</h2>
-        <div class="w-full h-64 overflow-hidden border-2 border-black rounded mb-4">
-          <img 
-            src="/Ejercicio Streaming BD1.png" 
-            alt="Consultas SQL Streaming" 
-            class="w-full h-full object-cover"
-          />
-        </div>
+      <div class="bg-white border-3 border-black p-8 shadow-[8px_8px_0px_rgba(0,0,0,0.3)] hover:-translate-y-1 transition">
+        <h2 class="text-2xl font-semibold mb-3">SQL</h2>
         <p class="opacity-80">
-          Implementación de scripts DDL y DML: SELECT, JOIN complejos, agregaciones y gestión de subconsultas.
+          Desarrollo de consultas estructuradas utilizando SELECT, JOIN, WHERE, GROUP BY y subconsultas para la extracción de información.
         </p>
       </div>
 
-      <div class="bg-white border-3 p-8 shadow-[8px_8px_0px_rgba(0,0,0,0.3)] hover:-translate-y-1 transition border-black">
-        <h2 class="text-2xl font-semibold mb-3">Proyecto Final</h2>
-        <div class="w-full h-64 overflow-hidden border-2 border-black rounded mb-4">
-          <img 
-            src="/image_7e5c05.png" 
-            alt="Componentes del Modelo ER" 
-            class="w-full h-full object-contain bg-gray-50"
-          />
-        </div>
-        <p class="opacity-80">
-          Documentación técnica del portafolio desplegado con Astro y GitHub Pages.
+      <div class="bg-white border-3 border-black p-8 shadow-[8px_8px_0px_rgba(0,0,0,0.3)] hover:-translate-y-1 transition md:col-span-2">
+        <h2 class="text-2xl font-semibold mb-3">Proyecto Portafolio</h2>
+        <img src="/image_7e5c05.png" alt="Componentes del Modelo" class="w-full max-w-2xl h-auto mb-4 border-2 border-black rounded mx-auto" />
+        <p class="opacity-80 text-center">
+          Implementación final del portafolio de evidencias utilizando <strong>Astro</strong> y despliegue mediante <strong>GitHub Pages</strong>.
         </p>
       </div>
 
     </div>
+
   </div>
 </section>
 
 </Layout>
 
 <style>
-  .card-img {
-    background-position: center;
-    background-size: cover;
+
+  h1, h2 {
+    font-family: 'Inter', sans-serif;
   }
 </style>

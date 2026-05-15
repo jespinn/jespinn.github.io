@@ -1,24 +1,50 @@
 ---
-import "../styles/global.css";
-import Layout from "../layouts/Layout.astro";
+import '../styles/global.css'
+import Layout from "../layouts/Layout.astro"
 
-import Header from "../components/Header.astro";
-import Hero from "../components/Hero.astro";
-import Tools from "../components/Tools.astro";
-import Footer from "../components/Footer.astro";
-import Reviews from "../components/Reviews.astro";
-import CallToAction from "../components/CallToAction.astro";
-import Works from "../components/Works.astro";
-import Service from "../components/Service.astro";
+import Header from '../components/Header.astro'
+import Hero from '../components/Hero.astro'
+import Tools from '../components/Tools.astro'
+import Footer from '../components/Footer.astro'
+import Reviews from '../components/Reviews.astro'
+import CallToAction from '../components/CallToAction.astro'
+import Works from '../components/Works.astro'
+import Service from '../components/Service.astro'
 ---
 
-<Layout title="Inicio | Portafolio José Espin">
-    <Header />
-    <Hero />
-    <Tools />
-    <Service />
-    <Works />
-    <Reviews />
-    <CallToAction />
-    <Footer />
+<Layout>
+  <Header />
+  <Hero />
+  <Tools />
+  <Service />
+
+<section class="px-3 py-20" id="presentacion">
+  <div class="max-w-4xl mx-auto bg-white border-3 shadow-[8px_8px_0px_rgba(0,0,0,0.3)] relative p-8">
+
+    <h2 class="text-4xl font-bold text-center mb-6">
+      Presentación
+    </h2>
+
+    <div class="border-3 border-black bg-white p-3">
+      <iframe
+        class="w-full border-2"
+        style="height:460px;"
+        src="https://www.youtube.com/embed/960YkV4kWbQ"
+        title="Video de presentación"
+        frameborder="0"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <p class="mt-5 text-center opacity-80">
+      Video de presentación del portafolio de Bases de Datos I.
+    </p>
+
+  </div>
+</section>
+
+  <Works />
+  <Reviews />
+  <CallToAction />
+  <Footer />
 </Layout>
