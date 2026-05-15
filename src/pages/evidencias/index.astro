@@ -1,89 +1,88 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import AppHeader from "../../components/Header.astro";
+import AppFooter from "../../components/Footer.astro";
+import svgUnderline from "../../assets/underline.svg";
+import arrowCard from "../../assets/arrow-card.svg";
 ---
 
-<Layout title="Evidencias | Modelo Entidad Relación">
-
-<section class="px-3 py-20 bg-gray-50">
-  <div class="max-w-5xl mx-auto">
-
-    <h1 class="text-4xl md:text-6xl font-black text-center mb-16 uppercase tracking-tighter">
-      Modelo Entidad Relación
-    </h1>
-
-    <div class="flex flex-col gap-20 mb-20">
-
-      <article class="flex flex-col">
-        <h2 class="text-2xl font-bold mb-4 text-gray-800">Ejercicio Aeropuerto BD1</h2>
-        <div class="w-full bg-white border-4 border-black shadow-[10px_10px_0px_rgba(0,0,0,1)] rounded-sm">
-          <img 
-            src="/Ejercicio Aeropuerto BD1.png" 
-            alt="Diagrama Aeropuerto" 
-            class="w-full h-auto"
-          />
+<Layout title="Evidencias | Portafolio José Espin">
+    <AppHeader />
+    <section class="py-25 space-y-10 px-5" id="evidencias">
+        <div class="max-w-md mx-auto relative">
+            <h1 class="text-4xl font-medium text-center">Evidencias del curso</h1>
+            <img src={svgUnderline.src} alt="línea" width="180" class="absolute left-30 -bottom-1" />
         </div>
-      </article>
 
-      <article class="flex flex-col">
-        <h2 class="text-2xl font-bold mb-4 text-gray-800">Ejercicio Hospital BD1</h2>
-        <div class="w-full bg-white border-4 border-black shadow-[10px_10px_0px_rgba(0,0,0,1)] rounded-sm">
-          <img 
-            src="/Ejercicio Hospital BD1.png" 
-            alt="Diagrama Hospital" 
-            class="w-full h-auto"
-          />
+        <p class="max-w-2xl mx-auto text-center opacity-80 text-lg">
+            Selecciona una categoría para ver las actividades desarrolladas durante el semestre.
+        </p>
+
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+            
+                href="/modelo-er/"
+                class="flex flex-col bg-white p-5 group relative transition-all duration-200 hover:shadow-[6px_6px_0px_var(--accent)] border-2 border-black"
+            >
+                <div class="w-full h-[200px] overflow-hidden border-2">
+                    <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Modelado E-R" class="w-full h-full object-cover" />
+                </div>
+                <div class="space-y-1 pt-4">
+                    <div class="flex pr-2">
+                        <h2 class="text-xl font-medium flex-1">Modelado E-R</h2>
+                        <img src={arrowCard.src} alt="flecha" width="25" />
+                    </div>
+                    <p class="text-sm opacity-80">Diagramas Entidad-Relación que representan la estructura lógica de un sistema.</p>
+                </div>
+            </a>
+
+            
+                href="/fundamentos/"
+                class="flex flex-col bg-white p-5 group relative transition-all duration-200 hover:shadow-[6px_6px_0px_var(--accent)] border-2 border-black"
+            >
+                <div class="w-full h-[200px] overflow-hidden border-2">
+                    <img src="https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Fundamentos" class="w-full h-full object-cover" />
+                </div>
+                <div class="space-y-1 pt-4">
+                    <div class="flex pr-2">
+                        <h2 class="text-xl font-medium flex-1">Fundamentos / Normalización</h2>
+                        <img src={arrowCard.src} alt="flecha" width="25" />
+                    </div>
+                    <p class="text-sm opacity-80">Normalización (1FN, 2FN, 3FN) y reducción a tablas.</p>
+                </div>
+            </a>
+
+            
+                href="/consultas-sql/"
+                class="flex flex-col bg-white p-5 group relative transition-all duration-200 hover:shadow-[6px_6px_0px_var(--accent)] border-2 border-black"
+            >
+                <div class="w-full h-[200px] overflow-hidden border-2">
+                    <img src="https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="SQL" class="w-full h-full object-cover" />
+                </div>
+                <div class="space-y-1 pt-4">
+                    <div class="flex pr-2">
+                        <h2 class="text-xl font-medium flex-1">Consultas SQL</h2>
+                        <img src={arrowCard.src} alt="flecha" width="25" />
+                    </div>
+                    <p class="text-sm opacity-80">SELECT, JOIN, WHERE, GROUP BY y subconsultas.</p>
+                </div>
+            </a>
+
+            
+                href="/proyecto-final/"
+                class="flex flex-col bg-white p-5 group relative transition-all duration-200 hover:shadow-[6px_6px_0px_var(--accent)] border-2 border-black"
+            >
+                <div class="w-full h-[200px] overflow-hidden border-2">
+                    <img src="https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Proyecto" class="w-full h-full object-cover" />
+                </div>
+                <div class="space-y-1 pt-4">
+                    <div class="flex pr-2">
+                        <h2 class="text-xl font-medium flex-1">Proyecto Final</h2>
+                        <img src={arrowCard.src} alt="flecha" width="25" />
+                    </div>
+                    <p class="text-sm opacity-80">Proyecto integrador del curso, documentado y publicado.</p>
+                </div>
+            </a>
         </div>
-      </article>
-
-      <article class="flex flex-col">
-        <h2 class="text-2xl font-bold mb-4 text-gray-800">Ejercicio Streaming BD1</h2>
-        <div class="w-full bg-white border-4 border-black shadow-[10px_10px_0px_rgba(0,0,0,1)] rounded-sm">
-          <img 
-            src="/Ejercicio Streaming BD1.png" 
-            alt="Diagrama Streaming" 
-            class="w-full h-auto"
-          />
-        </div>
-      </article>
-
-    </div>
-
-    <hr class="border-2 border-black mb-20" />
-
-    <div class="grid md:grid-cols-2 gap-8">
-
-      <div class="bg-white border-3 border-black p-8 shadow-[8px_8px_0px_rgba(0,0,0,0.3)] hover:-translate-y-1 transition">
-        <h2 class="text-2xl font-semibold mb-3">Normalización</h2>
-        <p class="opacity-80">
-          Aplicación de 1FN, 2FN y 3FN para reducir redundancia y mejorar integridad de los datos en diversos casos de estudio.
-        </p>
-      </div>
-
-      <div class="bg-white border-3 border-black p-8 shadow-[8px_8px_0px_rgba(0,0,0,0.3)] hover:-translate-y-1 transition">
-        <h2 class="text-2xl font-semibold mb-3">SQL</h2>
-        <p class="opacity-80">
-          Desarrollo de consultas estructuradas utilizando SELECT, JOIN, WHERE, GROUP BY y subconsultas para la extracción de información.
-        </p>
-      </div>
-
-      <div class="bg-white border-3 border-black p-8 shadow-[8px_8px_0px_rgba(0,0,0,0.3)] hover:-translate-y-1 transition md:col-span-2">
-        <h2 class="text-2xl font-semibold mb-3">Proyecto Portafolio</h2>
-        <img src="/image_7e5c05.png" alt="Componentes del Modelo" class="w-full max-w-2xl h-auto mb-4 border-2 border-black rounded mx-auto" />
-        <p class="opacity-80 text-center">
-          Implementación final del portafolio de evidencias utilizando <strong>Astro</strong> y despliegue mediante <strong>GitHub Pages</strong>.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
+    </section>
+    <AppFooter />
 </Layout>
-
-<style>
-
-  h1, h2 {
-    font-family: 'Inter', sans-serif;
-  }
-</style>
